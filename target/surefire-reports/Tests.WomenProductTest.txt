@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: Tests.WomenProductTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 15.422 sec <<< FAILURE! - in Tests.WomenProductTest
+shouldReturnResultsForSearchBlouse  Time elapsed: 7.466 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":".product\-name"}
+  (Session info: chrome=88.0.4324.104)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-2I5K1LC', ip: '192.168.0.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.8'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.104, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\Users\Ola\AppData\Local\...}, goog:chromeOptions: {debuggerAddress: localhost:54025}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dc8facfa1716c8d24c68a09c47c4e218
+*** Element info: {Using=class name, value=product-name}
+	at Tests.WomenProductTest.shouldReturnResultsForSearchBlouse(WomenProductTest.java:70)
+
