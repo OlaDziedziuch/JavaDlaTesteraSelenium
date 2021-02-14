@@ -1,11 +1,10 @@
-package Pages;
+package pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import java.util.NoSuchElementException;
 
 public class MyAccountPage extends BasePageObject {
 
@@ -18,7 +17,6 @@ public class MyAccountPage extends BasePageObject {
 
     public boolean isMyAccountIsDisplayed() {
         return isDisplayMyAccount(myAccount);
-
     }
 
     public boolean isDisplayMyAccount(WebElement myAccount) {

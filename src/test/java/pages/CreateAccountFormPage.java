@@ -1,11 +1,12 @@
-package Pages;
+package pages;
 
-import Model.Address;
-import Model.PersonalInformation;
+import model.Address;
+import model.PersonalInformation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import java.util.NoSuchElementException;
 
 
@@ -93,10 +94,8 @@ public class CreateAccountFormPage extends BasePageObject {
     @FindBy(className = "alert-danger")
     WebElement redBoxAlert;
 
-
     public boolean isAccountFormVisible() {
         return isAccountFormVisible(createAccountFormPage);
-
     }
 
     public boolean isAccountFormVisible(WebElement createAccountFormPage) {
@@ -129,7 +128,7 @@ public class CreateAccountFormPage extends BasePageObject {
         specialOffersBox.click();
     }
 
-    public void sendPI(PersonalInformation personalInformation) {
+    public void sendPersonalInformation(PersonalInformation personalInformation) {
 
         firstName.sendKeys(personalInformation.getFirstName());
         lastName.sendKeys(personalInformation.getLastName());
@@ -154,12 +153,10 @@ public class CreateAccountFormPage extends BasePageObject {
         homePhoneField.sendKeys(address.getHomePhone());
         monthOfBirth.sendKeys(address.getMobilePhone());
         addressAliasField.sendKeys(address.getAssignAnAddressAliasForFutureReference());
-
     }
 
     public void sendRegisterForm() {
         registerButton.click();
-
     }
 
     public boolean isRedBoxAlertIsDisplayed() {
@@ -177,6 +174,5 @@ public class CreateAccountFormPage extends BasePageObject {
 
         return isDisplayed;
     }
-
 }
 

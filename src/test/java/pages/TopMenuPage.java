@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,8 +29,4 @@ public class TopMenuPage extends BasePageObject {
     public void clickOnSignInLink() {
         signInLink.click();
     }
-
-
-
-
 }

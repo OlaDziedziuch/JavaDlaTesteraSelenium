@@ -1,10 +1,10 @@
-package Tests;
+package tests;
 
-import Enums.MessageSubject;
-import Model.Message;
-import Pages.ContactUsFormPage;
-import Pages.TopMenuPage;
-import Utils.PageTitleUtils;
+import enums.MessageSubject;
+import model.Message;
+import pages.ContactUsFormPage;
+import pages.TopMenuPage;
+import utils.PageTitleUtils;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,7 +14,6 @@ import static org.assertj.core.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class ContactUsTest extends BaseTest {
-
 
     private TopMenuPage topMenuPage;
     private ContactUsFormPage contactUsFormPage;
@@ -37,7 +36,6 @@ public class ContactUsTest extends BaseTest {
         contactUsFormPage.clickOnSendButton();
 
         assertThat(contactUsFormPage.isRedAlertBoxDisplayed()).isTrue();
-
     }
 
     @Test
@@ -49,7 +47,6 @@ public class ContactUsTest extends BaseTest {
         contactUsFormPage.clickOnSendButton();
 
         assertThat(contactUsFormPage.isRedAlertBoxDisplayed()).isTrue();
-
     }
 
     @Test
@@ -66,5 +63,4 @@ public class ContactUsTest extends BaseTest {
 
         assertThat(contactUsFormPage.isGreenAlertBoxDisplayed()).isTrue();
     }
-
 }

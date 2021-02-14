@@ -1,6 +1,6 @@
-package Model;
+package model;
 
-import Enums.MessageSubject;
+import enums.MessageSubject;
 import lombok.Data;
 
 @Data

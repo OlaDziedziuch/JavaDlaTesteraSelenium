@@ -1,7 +1,7 @@
-package Tests;
+package tests;
 
-import Pages.PopularItemsPage;
-import Utils.PageTitleUtils;
+import pages.PopularItemsPage;
+import utils.PageTitleUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,23 +26,10 @@ public class HomePageTest extends BaseTest {
         popularItemsPage = new PopularItemsPage(driver);
     }
 
-
-
     @Test
     public void shouldSeePopularItemsOnHomePage() {
 
         List<String> productNames = popularItemsPage.getProductNames();
-
-       /* List<WebElement> productNamesByXPath = driver.findElements
-                (By.xpath(("//*[@id='homefeatured']//*[@class='product-name']")));*/
-
-       /* for (WebElement productName : productNamesByXPath) {
-            System.out.println(productName.getText());
-        }
-
-        for (WebElement productName : productNamesByCss) {
-            System.out.println(productName.getText());
-        }*/
 
         List<String> productWithEmptyName = productNames.stream()
                 .filter(String::isEmpty)
@@ -50,6 +37,4 @@ public class HomePageTest extends BaseTest {
 
         Assertions.assertThat(productWithEmptyName).isEmpty();
     }
-
-
 }

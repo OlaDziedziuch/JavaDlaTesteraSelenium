@@ -1,9 +1,9 @@
-package Tests;
+package tests;
 
-import Pages.ProductMenuPage;
-import Pages.SearchPage;
-import Pages.WomenProductPage;
-import Utils.PageTitleUtils;
+import pages.ProductMenuPage;
+import pages.SearchPage;
+import pages.WomenProductPage;
+import utils.PageTitleUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -66,13 +66,9 @@ public class WomenProductTest extends BaseTest {
 
         searchPage.enterSearch("blouse");
         searchPage.clickOnSearch();
-
-        womenProductPage.shouldDisplayProductName();
-        womenProductPage.shouldDisplayProductPrice();
+        womenProductPage.shouldReturnProductName().equals("Blouse");
+        womenProductPage.shouldReturnProductPrice().equals("$27.00");
 
         Assertions.assertThat(womenProductPage.isBlouseCountIsDisplayed()).isTrue();
-
     }
-
-
 }

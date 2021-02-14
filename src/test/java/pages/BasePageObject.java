@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -8,7 +8,7 @@ import java.time.Duration;
 
 public class BasePageObject {
 
-    protected WebDriverWait wait;
+   protected WebDriverWait wait;
 
     public BasePageObject(WebDriver driver) {
         PageFactory.initElements(driver, this);

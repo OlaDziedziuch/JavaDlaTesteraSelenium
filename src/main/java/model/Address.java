@@ -1,7 +1,7 @@
-package Model;
+package model;
 
-import Enums.Country;
-import Enums.State;
+import enums.Country;
+import enums.State;
 import lombok.Data;
 
 @Data
@@ -20,7 +20,5 @@ public class Address {
     private String homePhone;
     private String mobilePhone;
     private String assignAnAddressAliasForFutureReference;
-
-
 
 }

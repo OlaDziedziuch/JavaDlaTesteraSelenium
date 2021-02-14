@@ -1,5 +1,4 @@
-package Pages;
-
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,21 +33,19 @@ public class WomenProductPage extends BasePageObject {
                 .collect(Collectors.toList());
     }
 
-    public void shouldDisplayProductName() {
-        productName.getText().equals("Blouse");
+    public String shouldReturnProductName() {
+        return productName.getText();
     }
 
-    public void shouldDisplayProductPrice() {
-        productPrice.getText().equals("$27.00");
+    public String shouldReturnProductPrice() {
+        return productPrice.getText();
     }
 
     public boolean isBlouseCountIsDisplayed() {
         return isProductCountIsDisplayed(productCount);
-
     }
 
     public boolean isProductCountIsDisplayed(WebElement productCount) {
-
         wait.until(ExpectedConditions.visibilityOf(productCount));
 
         boolean isDisplayed = false;
@@ -60,8 +57,9 @@ public class WomenProductPage extends BasePageObject {
         return isDisplayed;
 
     }
-
 }
+
+
 
 
 

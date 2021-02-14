@@ -1,9 +1,8 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -13,7 +12,6 @@ public class PopularItemsPage extends BasePageObject {
     super(driver);
     }
 
-    // it looks like a class member
     @FindBy(css = "#homefeatured .product-name")
     List<WebElement> productNames;
 
@@ -22,6 +20,4 @@ public class PopularItemsPage extends BasePageObject {
                 .map(el -> el.getText().trim())
                 .collect(Collectors.toList());
     }
-
-
 }

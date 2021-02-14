@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +16,6 @@ public class SearchPage extends BasePageObject {
     @FindBy(className = "button-search")
     WebElement searchButton;
 
-
     public void enterSearch(String search) {
         searchField.sendKeys(search);
     }
@@ -24,7 +23,4 @@ public class SearchPage extends BasePageObject {
     public void clickOnSearch() {
         searchButton.click();
     }
-
-
-
 }
